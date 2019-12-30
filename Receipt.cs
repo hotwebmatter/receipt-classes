@@ -44,5 +44,9 @@ namespace receipt_classes
             itemUnitPrice = 1.25;
             itemDescription = "granola bar";
         }
+        public double ItemsTotalCost()
+        {
+            return itemUnitPrice * itemQuantityPurchased;
+        }
     }
 }
