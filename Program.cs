@@ -7,7 +7,8 @@ namespace receipt_classes
     {
         static void Main(string[] args)
         {
-            WriteLine("Hello World!");
+            Receipt myReceipt = new Receipt();
+            WriteLine("{0, 12}{1, 8:C}", "Total Cost:", myReceipt.ItemsTotalCost());
         }
     }
 }
