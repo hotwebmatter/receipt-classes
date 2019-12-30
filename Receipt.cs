@@ -6,8 +6,6 @@ namespace receipt_classes
 {
     class Receipt
     {
-        // receipt counter
-        private static int receiptCounter;
         // data members
         private DateTime dateOfPurchase = new DateTime();
         private int receiptNumber,
@@ -31,10 +29,10 @@ namespace receipt_classes
         public double ItemUnitPrice { set; get; }
         public string ItemDescription { set; get; }
         // constructor
-        public Receipt()
+        public Receipt(int rcptNumber)
         {
             dateOfPurchase = DateTime.Now;
-            receiptNumber = receiptCounter++;
+            receiptNumber = rcptNumber;
             customerNumber = 531420;
             customerName = "Joe Doe";
             customerAddress = "123 Shady Lane";
