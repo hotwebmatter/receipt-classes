@@ -9,6 +9,7 @@ namespace receipt_classes
         {
             Receipt myReceipt = new Receipt();
             WriteLine("{0, 12}{1, 8:C}", "Total Cost:", myReceipt.ItemsTotalCost());
+            WriteLine(myReceipt.ToString());
         }
     }
 }

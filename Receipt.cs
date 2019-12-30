@@ -38,7 +38,7 @@ namespace receipt_classes
             customerNumber = 531420;
             customerName = "Joe Doe";
             customerAddress = "123 Shady Lane";
-            customerPhone = "+1 (401) 555-1212";
+            customerPhone = "401-555-1212";
             itemNumber = 97531086;
             itemQuantityPurchased = 3;
             itemUnitPrice = 1.25;
@@ -47,6 +47,24 @@ namespace receipt_classes
         public double ItemsTotalCost()
         {
             return itemUnitPrice * itemQuantityPurchased;
+        }
+        // override base.ToString()
+        public override string ToString()
+        {
+            string result = String.Format("******** Receipt Data Table ********\n");
+            result += String.Format("* {0, 16}{1, 16} *\n", "Receipt Number:", receiptNumber);
+            result += String.Format("* {0, 16}{1, 16:yyyy/MM/dd} *\n", "Purchase Date:", dateOfPurchase);
+            result += String.Format("* {0, 16}{1, 16} *\n", "Customer Number:", customerNumber);
+            result += String.Format("* {0, 16}{1, 16} *\n", "Cust. Name:", customerName);
+            result += String.Format("* {0, 16}{1, 16} *\n", "Cust. Address:", customerAddress);
+            result += String.Format("* {0, 16}{1, 16} *\n", "Cust. Phone:", customerPhone);
+            result += String.Format("* {0, 16}{1, 16} *\n", "Item Number:", itemNumber);
+            result += String.Format("* {0, 16}{1, 16} *\n", "Description:", itemDescription);
+            result += String.Format("* {0, 16}{1, 16:C} *\n", "Unit Price:", itemUnitPrice);
+            result += String.Format("* {0, 16}{1, 16} *\n", "Quantity:", itemQuantityPurchased);
+            result += String.Format("* {0, 16}{1, 16:C} *\n", "Total Cost:", ItemsTotalCost());
+            result += String.Format("************************************\n");
+            return result;
         }
     }
 }
