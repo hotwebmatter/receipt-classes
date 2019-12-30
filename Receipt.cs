@@ -28,7 +28,7 @@ namespace receipt_classes
         public int ItemQuantityPurchased { set; get; }
         public double ItemUnitPrice { set; get; }
         public string ItemDescription { set; get; }
-        // constructor
+        // constructors
         public Receipt(int rcptNumber)
         {
             dateOfPurchase = DateTime.Now;
@@ -41,6 +41,19 @@ namespace receipt_classes
             itemQuantityPurchased = 3;
             itemUnitPrice = 1.25;
             itemDescription = "granola bar";
+        }
+        public Receipt(int rcptNumber, int custNumber, string custName, string custAddress, string custPhone, int itemNum, int itemQty, double unitPrice, string itemDesc)
+        {
+            dateOfPurchase = DateTime.Now;
+            receiptNumber = rcptNumber;
+            customerNumber = custNumber;
+            customerName = custName;
+            customerAddress = custAddress;
+            customerPhone = custPhone;
+            itemNumber = itemNum;
+            itemQuantityPurchased = itemQty;
+            itemUnitPrice = unitPrice;
+            itemDescription = itemDesc;
         }
         public double ItemsTotalCost()
         {
