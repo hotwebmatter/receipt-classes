@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace receipt_classes
 {
@@ -6,7 +7,7 @@ namespace receipt_classes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WriteLine("Hello World!");
         }
     }
 }
