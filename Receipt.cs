@@ -38,8 +38,8 @@ namespace receipt_classes
             customerNumber = 531420;
             customerName = "Joe Doe";
             customerAddress = "123 Shady Lane";
-            customerPhone = "+1 (401) 555-1212"
-            itemNumber = 9753108642;
+            customerPhone = "+1 (401) 555-1212";
+            itemNumber = 97531086;
             itemQuantityPurchased = 3;
             itemUnitPrice = 1.25;
             itemDescription = "granola bar";
